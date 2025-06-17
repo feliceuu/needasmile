@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliceuu's Funny World 🌟</title>
+  <style>
+    /* Basic Reset & Fonts */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fffbe6;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(45deg, #ff6f91, #ff9671);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 3rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {text-shadow: 0 0 10px #fff, 0 0 20px #ff6f91;}
+      to {text-shadow: 0 0 20px #ff9671, 0 0 30px #ff9671;}
+    }
+    nav {
+      background: #ff6f91;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff9671;
+    }
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      font-size: 2.5rem;
+      color: #ff6f91;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #ff9671;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+    .quiz-question label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+    button {
+      background: #ff6f91;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff9671;
+    }
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    /* Chatbot style */
+    .chatbot {
+      background: #ffebf0;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 4px 15px rgba(255,111,145,0.3);
+    }
+    .chat-window {
+      height: 250px;
+      overflow-y: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ff6f91;
+    }
+    .chat-input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ff6f91;
+      font-size: 1rem;
+    }
+    .chat-message {
+      margin: 8px 0;
+    }
+    .bot-message {
+      color: #ff6f91;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ff6f91;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Feliceuu's Funny World 🌟
+</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#blog">Funny Blog</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#chatbot">Chatbot</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi! I’m Feliceuu, your friendly neighborhood web developer who loves jokes, memes, and all things funny! I build websites that make you smile 😄 and laugh out loud 😂.</p>
+  <p>Fun fact: I once tried to debug my code by yelling at it — didn’t work, but it was fun!</p>
+</section>
+
+<section id="blog">
+  <h2>Funny Blog</h2>
+  <article>
+    <h3>Why Debugging is Like Being a Detective</h3>
+    <p>Ever spent hours looking for a bug that turned out to be a missing semicolon? Welcome to the detective club! 🕵️‍♂️🔍</p>
+  </article>
+  <article>
+    <h3>Top 5 Memes for Programmers</h3>
+    <p>1. “It works on my machine!”<br>2. “Have you tried turning it off and on again?”<br>3. “404: Sleep not found”<br>4. “Coding: Where the coffee is your best friend”<br>5. “Commit early, commit often... or just cry”</p>
+  </article>
+</section>
+
+<section id="quiz">
+  <h2>Funny Quiz: What Kind of Pizza Are You?</h2>
+  <form id="pizzaQuiz">
+    <div class="quiz-question">
+      <label>1. What's your favorite topping?</label>
+      <label><input type="radio" name="q1" value="Cheese" required> Cheese</label>
+      <label><input type="radio" name="q1" value="Pepperoni"> Pepperoni</label>
+      <label><input type="radio" name="q1" value="Pineapple"> Pineapple</label>
+    </div>
+    <div class="quiz-question">
+      <label>2. What’s your mood today?</label>
+      <label><input type="radio" name="q2" value="Cheesy"> Cheesy</label>
+      <label><input type="radio" name="q2" value="Spicy"> Spicy</label>
+      <label><input type="radio" name="q2" value="Sweet"> Sweet</label>
+    </div>
+    <button type="submit">See Result</button>
+  </form>
+  <p id="quizResult" style="margin-top:20px; font-size:1.2rem; font-weight:bold;"></p>
+</section>
+
+<section id="timeline">
+  <h2>Funny Life Timeline</h2>
+  <ul>
+    <li><strong>2010:</strong> Born with a giggle 😂</li>
+    <li><strong>2018:</strong> Tried coding, accidentally broke the internet 🌐💥</li>
+    <li><strong>2023:</strong> Decided to build funny websites 🎉</li>
+    <li><strong>2025:</strong> Still laughing at own jokes 🤣</li>
+  </ul>
+</section>
+
+<section id="chatbot">
+  <h2>Chat with FunnyBot 🤖</h2>
+  <div class="chatbot">
+    <div class="chat-window" id="chatWindow"></div>
+    <input class="chat-input" id="chatInput" placeholder="Say something funny..." />
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Funny Meme Gallery</h2>
+  <div class="gallery">
+    <img src="https://i.imgur.com/j6zq7pV.jpg" alt="Funny Meme 1" />
+    <img src="https://i.imgur.com/vxZy5U9.jpg" alt="Funny Meme 2" />
+    <img src="https://i.imgur.com/9Q5Xt5Q.jpg" alt="Funny Meme 3" />
+    <img src="https://i.imgur.com/czVrH3A.jpg" alt="Funny Meme 4" />
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Want to send me a joke or just say hi? Use the form below!</p>
+  <form id="contactForm">
+    <label>Name:<br /><input type="text" id="name" required></label><br /><br />
+    <label>Email:<br /><input type="email" id="email" required></label><br /><br />
+    <label>Message:<br /><textarea id="message" rows="4" required></textarea></label><br /><br />
+    <button type="submit">Send</button>
+  </form>
+  <p id="contactResponse" style="margin-top:15px; font-weight:bold;"></p>
+</section>
+
+<footer>
+  Made with ❤️ and laughter by Feliceuu © 2025
+</footer>
+
+<script>
+  // Quiz logic
+  const pizzaQuiz = document.getElementById('pizzaQuiz');
+  const quizResult = document.getElementById('quizResult');
+
+  pizzaQuiz.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q1 = pizzaQuiz.q1.value;
+    const q2 = pizzaQuiz.q2.value;
+
+    let result = "";
+
+    if(q1 === "Cheese" && q2 === "Cheesy") {
+      result = "You are Classic Cheese Pizza! Simple and always loved.";
+    } else if(q1 === "Pepperoni" && q2 === "Spicy") {
+      result = "You are Spicy Pepperoni! Bold and full of flavor.";
+    } else if(q1 === "Pineapple" && q2 === "Sweet") {
+      result = "You are Sweet Pineapple! Unique and refreshing.";
+    } else {
+      result = "You are a Mixed Pizza! A little bit of everything fun!";
+    }
+
+    quizResult.textContent = result;
+  });
+
+  // Chatbot logic
+  const chatWindow = document.getElementById('chatWindow');
+  const chatInput = document.getElementById('chatInput');
+
+  const botReplies = [
+    "Why don't scientists trust atoms? Because they make up everything! 😂",
+    "I told my computer I needed a break, and now it won't stop sending me Kit-Kats!",
+    "Why did the developer go broke? Because he used up all his cache!",
+    "I'm not lazy, I'm just on energy-saving mode.",
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "Knock knock! Who’s there? HTML. HTML who? HTML you later!"
+  ];
+
+  chatInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter' && chatInput.value.trim() !== '') {
+      const userMsg = chatInput.value.trim();
+      appendMessage(`You: ${userMsg}`);
+      chatInput.value = '';
+
+      setTimeout(() => {
+        const reply = botReplies[Math.floor(Math.random() * botReplies.length)];
+        appendMessage(`FunnyBot: ${reply}`, true);
+      }, 1000);
+    }
+  });
+
+  function appendMessage(msg, isBot = false) {
+    const msgElem = document.createElement('p');
+    msgElem.textContent = msg;
+    msgElem.className = isBot ? 'chat-message bot-message' : 'chat-message';
+    chatWindow.appendChild(msgElem);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  }
+
+  // Contact form logic
+  const contactForm = document.getElementById('contactForm');
+  const contactResponse = document.getElementById('contactResponse');
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Silly validation example
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name.toLowerCase() === "admin") {
+      contactResponse.textContent = "Sorry, Admins can't send jokes here! 😜";
+      contactResponse.style.color = 'red';
+      return;
+    }
+
+    contactResponse.style.color = 'green';
+    contactResponse.textContent = `Thanks for your message, ${name}! I'll get back to you with a joke soon! 😂`;
+
+    contactForm.reset();
+  });
+</script>
+
+</body>
+</html>
